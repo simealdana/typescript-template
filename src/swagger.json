@@ -1,0 +1,57 @@
+{
+	"basePath": "/",
+	"consumes": [
+		"application/json"
+	],
+	"definitions": {
+		"PingResponse": {
+			"properties": {
+				"message": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"message"
+			],
+			"type": "object",
+			"additionalProperties": false
+		}
+	},
+	"info": {
+		"title": "authservice",
+		"version": "1.0.0",
+		"description": "Serverless aws-nodejs-typescript template",
+		"license": {
+			"name": "MIT"
+		},
+		"contact": {
+			"name": "The serverless webpack authors ",
+			"url": "https://github.com/elastic-coders/serverless-webpack"
+		}
+	},
+	"paths": {
+		"/ping": {
+			"get": {
+				"operationId": "GetMessage",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/PingResponse"
+						}
+					}
+				},
+				"security": [],
+				"parameters": []
+			}
+		}
+	},
+	"produces": [
+		"application/json"
+	],
+	"swagger": "2.0",
+	"securityDefinitions": {}
+}
